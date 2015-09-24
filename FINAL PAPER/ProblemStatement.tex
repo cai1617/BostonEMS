@@ -1,0 +1,78 @@
+\documentclass{amsart}
+%\documentclass[epsf]{article}
+\usepackage{framed}
+
+\usepackage{parskip,newclude,hyperref, color}
+\usepackage[margin=1in]{geometry}
+\setlength{\parindent}{15pt}
+
+
+
+\usepackage{setspace,fancyhdr}
+\pagestyle{fancy}
+\fancyhead[L]{{\scshape }}
+\fancyhead[R]{{\scshape }}
+
+
+\begin{document}
+\title{Problem Statement: Optimization of EMT Staffing Plan}
+\author{Tam Nguyen and Wesley Cai}
+
+\maketitle
+
+\onehalfspacing 
+
+\section{Abstract}
+
+We present a method to optimize a shift schedule for each region as well as finding the most optimal way to place ambulances at stations located in and around the Boston metropolitan area. The goal is to minimize the need for ambulances during a specific time period, given a certain expected coverage. Using data received from the Boston Emergency Services regarding the number of incidents per hour in a day, we generated a demand curve for our study area Roxbury. We plan to use the model of the study area to analyze other parts of Boston. Our results reveal that our model will minimize the costs because it uses the minimal number of ambulances based on the number of incidents in the region (Roxbury). Our model intakes the average calls per hour and each call represents the need for an ambulance. In order to minimize the number of ambulances, each ambulance has 20 minutes max to complete their ?task? until they are assigned their next task
+
+\section{Introduction}
+
+
+\subsection{Background}
+
+Emergency medical services (EMS) can be expensive in large cities such as Boston and Los Angeles [1]. Historically, EMS regulations were only established in the early 1970s. Before then, the only pre-hospital care people received were transportation. To cut costs, funeral homes played an important part in providing service and transportation [1]. Labor costs tend to be the single greatest component of providing EMS [1].  In 2013, the Boston EMS provided 142, 341 support units including basic life support (BLS) and advanced life support (ALS). Surprisingly enough, there were only 24 frontline ambulances (19 EMT and 5 paramedic) available serving a population of about 645,000 [4]. This indicates that a change in shift schedule has a great impact on the efficiency of the Boston EMS (City of Boston). Therefore, we would like to investigate how a change in the shift schedule will affect the performance of the current Boston EMS system. More specifically, this thesis deals with optimizing a shift schedule to find the best way to place paramedics and ambulances at stations located in and around the Boston metropolitan area. By stations, we mean where the ambulances are located at a specific time of day. The 2013 Boston EMS data will help us determine which station to focus on initially. In order to provide the best care, the EMTs and paramedics must respond to calls in an efficient manner and timely manner. \\
+
+Ambulance allocation problems have been around for nearly three decades [2]. Shiah and Chen’s model focuses more on minimizing the number of ambulances as well as the service areas that will need to be covered in Taichung City. They’re model was an improvement of another model, the Location Set Covering Model [2] but also included the capacity of the ambulance service area. They also took into account the city’s (Taichung City) physical road structure and population distribution [2]. \\
+
+Church et al. created a model that closely resembles our goal. Their model’s goal was to schedule shifts in a way that closely matched the fluctuating incidents over each day of the week. They included visuals such as graphs that depicted the number of units scheduled in a given hour. The authors realized that in order for their model to be successful they must deploy EMTs and paramedics as close as possible to the unit demand curve, which is the curve that describes the number of ambulance units needed per hour [1]. This model used discrete integer programming.\\
+	
+Rajagoplan et al. [3]  attacked this problem in two steps. First, he created a dynamic expected coverage model, and figured out the minimum number of ambulances for each time interval, given certain coverage requirement of each time interval and locations. Second, with the solution from the first step, Rajagoplan et. al developed a different model to determine the optimal shifts. Since the first model can not be solved by integer linear programing, the authors stated that a heuristic algorithm and a tabu search, might be possibly utilized to solve the model due to the structure of the problem [3]. One of the most admiring parts of this paper is that the results, which consist of tables and maps can be easily understood.\\
+
+
+\subsection{Motivation}
+
+A shift scheduling of Emergency Medical Service affects people’s life. People have better life support when they accidentally encounter emergent medical issue, if the emergency medical service has been provided more efficiently. In other words, a good shift plan makes ambulances more efficient to get to the scene. Although this problem has been tackled before, it is important because urban planning for ambulances and paramedics is a dynamic problem due to the dynamic population, age proportions, different cities, and budgets.\\
+
+In addition, a various of shift plans results to different spending such as the maintenance of ambulances, and the salary for employees. Generally, more ambulances or staff is more costly. In reality, each city has its limited budget for emergent medical services. It would be beneficial to know how much a city need to spend to achieve a certain level of satisfaction or dynamic coverage of providing Emergent Medical Service.\\
+
+\subsection{Objectives}
+
+The goal of this project is to optimize a shift schedule for each station as well as finding the most optimal way to place paramedics and ambulances at stations located in and around the Boston metropolitan area. We will focus on one station and see if it will fit our potential model and then incorporate more stations. By stations we mean, where the ambulances are placed such as fire stations, police stations, and hospitals. The 2013 Boston EMS data will help us determine which station we would like to focus on initially. \\
+
+The first step of our project is to optimize the shift schedule for a station. A shift schedule must satisfy some constraints such as the max number of people per ambulance (2 people), max number of shifts they can work or max number of hours worked per day. After the shift schedule is figured out, the model should also optimize the number of ambulances, EMTs, and paramedics at each station per time of day. In detail, the decision variables of a shift schedule model will include the length of each shift (4 hrs, 8 hrs, or 10 hrs), the starting time of each shift, how many different shifts will be applied and the number of staff on this shift.\\
+
+For the second phase, we optimize the shift schedule that incorporating more ambulance stations. There are 16 stations located in Boston (City of Boston). The expected outcome is to get the optimal number of staff and ambulances at each station per shift. In order to evaluate our model, we will like to measure the success rate at which the ambulance reaches their designated area within the priority time. Our objective function will be maximizing the success rate or minimizing the failure rate. The constraints will include the budget, number of staff (64 paramedics and 244 EMTs), number of ambulances and others.\\
+
+For the last phase, we plan to simulate our model (if we can go that far). Based on the 2013 Vital Statistics from the Boston EMS website (which told us the number of incidents per region in 2013) and the frequency chart, which would show the probability of a call occurring during a specific time period. The expected number of calls at a set time at some region can be utilized to simulate real-life situations. During the simulation, the success rate or the failure rate will be recorded. This information will indicate what the efficiency the model is.\\
+
+%\begin{thebibliography}{9}
+
+%\bibitem{Church} R. Church, P. Sorensen, and W. Corrigan, Manpower Deployment in Emergency Services, (2001) 1-16, 37, 219-234.
+
+%\bibitem{Shiah} D. Shiah, S. Chen. Ambulance allocation capacity model, (2007) 40-46.
+
+%\bibitem{Rajagopalan} H. Rajagopalan, C. Saydam, E. Sharer, and H. Setzler. Ambulance Deployment and Shift Scheduling: An Integrated Approach, Journal of Service Science and Management, (2011) 4, 66-78.
+
+%\bibitem{City of Boston} City of Boston, Boston Emergency Medical Services, 2013 Vital Statistics.
+
+%\bibitem{City of Boston} City of Boston, Boston EMS Ambulances.
+
+
+
+
+
+
+%\end{thebibliography}
+
+\end{document}

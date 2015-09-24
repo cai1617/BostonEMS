@@ -1,0 +1,70 @@
+\documentclass{article}
+\usepackage{amsrefs}
+\begin{document}
+\begin{bibdiv}
+\begin{biblist}
+
+\bib{AmbAllo2007}{article}{
+title={Ambulance allocation capacity model},
+author={Shiah, D.},
+author={Chen, S.},
+Journal={Proceedings of the 9th International Conference on e-Health Networking, Applications and Services},
+date={2007},
+publisher={IEEE},
+pages={40-45},
+address={Taichung County, Taiwan}
+eprint={http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=4265794&url=http\%3A\%2F\%2Fieeexplore.ieee.org\%2Fiel5\%2F4265778\%2F4265779\%2F04265794.pdf\%3Farnumber\%3D4265794}
+}
+
+
+\bib{BostonEMS2013}{article}{
+title={Boston Emergency Medical Services 2013 VITAL STATISTICS},
+date={Sept. 19, 2014},
+publisher={City of Boston Emergency Medical Services},
+address={Boston, MA}
+eprint={http://www.cityofboston.gov/images_documents/Boston\%20EMS\%202013\%20Vital\%20Stats_tcm3-39011.pdf}
+}
+
+\bib{Hari2010}{article} {
+title={Ambulance Deployment and Shift Scheduling: },
+subtitle={An Integrated Approach},
+author={Rajagopalan, H.},
+author={Saydam, C..},
+author={Sharer, E.},
+author={Setzler, H.},
+journal={Journal of Service Science and Management},
+volume={4},
+date={November 27th, 2010},
+pages=={66-78},
+
+}
+
+\bib{ManPowerDeploy2001}{article}{
+        title={ManPower Deployment in Emergency Services},
+        author={Church, Richard},
+author ={Sorensen, Paul},
+author = {Corrigan, William},
+journal = {Fire Technology},
+        date={2001},
+        publisher={Kluwer Academic Publishers},
+    	pages={219-234},
+address={United States}
+}
+
+\bib{Michel2010}{article} {
+title={Solving an Ambulance Location Model by Tabu Search},
+author={Michel , G.},
+author={Gilbert, L.},
+author={Semet, F.},
+journal={Location Science},
+publisher={Pergamon},
+volume={5},
+number={2},
+data={1998},
+pages=={75-88},
+address={Great Britain},
+}
+
+\end{biblist}
+\end{bibdiv}
+\end{document}
